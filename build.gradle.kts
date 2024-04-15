@@ -2,6 +2,7 @@ plugins {
     id("java")
     id("io.freefair.lombok") version "8.6"
     `maven-publish`
+    `java-library`
     id("com.github.johnrengelman.shadow") version "7.1.2"
 }
 
@@ -14,7 +15,7 @@ repositories {
 
 dependencies {
     implementation("org.mongodb:mongodb-driver-sync:5.0.1")
-    implementation("com.google.code.gson:gson:2.10.1")
+    api("com.google.code.gson:gson:2.10.1")
 }
 
 publishing {
