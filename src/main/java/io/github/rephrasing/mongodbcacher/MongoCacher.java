@@ -27,9 +27,9 @@ public abstract class MongoCacher<T> implements JsonSerializer<T>, JsonDeseriali
         this.collectionName = collectionName;
     }
 
-    abstract Class<T> getType();
+    abstract public Class<T> getType();
 
-    abstract boolean compare(T object1, T object2);
+    abstract public boolean compare(T object1, T object2);
 
     public void fetch(MongoDatabaseHandler databaseHandler, MongoCacheHandler cacheHandler) {
         if (!databaseHandler.isConnected()) {
